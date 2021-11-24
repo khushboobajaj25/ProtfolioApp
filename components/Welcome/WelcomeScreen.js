@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
-import Window from './Window';
+import Window from '../Common/Window';
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
         color:"white",
        borderBottomWidth: 1,
         borderRadius: 8,
+        borderBottomColor:"#4682B4",
 
     }
 })

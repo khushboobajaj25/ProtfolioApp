@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -12,11 +12,10 @@ import {
 
 
 
-export default function MainProject(props) {
+export default function Gallery(props) {
   const [active,setActive]= useState(null);
   const images = props.img;
   function change(nativeEvent){
-    // console.log("nativeEvent:", nativeEvent)
     if(nativeEvent) {
       const slide = Math.ceil(nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width);
       if (slide !== active) {
@@ -30,9 +29,6 @@ export default function MainProject(props) {
     
     return (
       <SafeAreaView style={styles.container}>
-        {/* <View style={{ padding: 20, backgroundColor: 'orange', justifyContent: 'center', alignItems: 'center' }}>
-          <Text style={{ color: 'white' }}>HomeScreen</Text>
-        </View> */}
         <View style={styles.wrap}>
           <ScrollView
             onScroll={({ nativeEvent })=>change(nativeEvent)}
@@ -54,7 +50,7 @@ export default function MainProject(props) {
           </ScrollView>
           <View style={styles.wrapDot}>
             {
-              images.map((e, index) =>
+              images.length>1 && images.map((e, index) =>
                 <Text
                   key={index}
                   style={active === index ? styles.dotActive : styles.dot}>●</Text>)
@@ -74,9 +70,6 @@ const styles = StyleSheet.create({
       marginLeft:50,
       margin:"auto",
       alignItems:"center",
-     
-      
-    // flex: 1
   },
   wrap: {
     width: Dimensions.get('window').width*0.75,

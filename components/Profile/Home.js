@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity, Button } from 'react-native'
+import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity, Button, Linking } from 'react-native'
 import { Octicons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 export default function Home() {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Khushboo's Protfolio</Text>
-            <Image source={require("../assets/img.jpg")} style={styles.img} />
+            <Image source={require("../../assets/img.jpg")} style={styles.img} />
             <View style={styles.content}>
                 <View style={styles.namecontent}>
                     <Text style={styles.name}>Khushboo Bajaj</Text>
@@ -18,7 +18,7 @@ export default function Home() {
                 </View>
                 <View style={styles.namecontent}>
                     <Entypo name="github-with-circle" size={24} color="#6e5494" />
-                    <Text style={{ "color": "#6e5494",fontSize:15  }}> https://github.com/khushboobajaj25</Text>
+                    <Text style={{ "color": "#6e5494",fontSize:15  }} onPress={()=> Linking.openURL("https://github.com/khushboobajaj25")}> https://github.com/khushboobajaj25</Text>
                 </View>
         
 

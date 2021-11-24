@@ -30,7 +30,7 @@ export default function Skills() {
                 renderItem={({ item }) => {
                 return (
                     <View style={styles.container}>
-                        {item.icon?<MaterialCommunityIcons name={item.icon}  size={30} color="black" style={styles.icon}/>:<Image source={require("../assets/dj.png")} style={styles.img} />}
+                        {item.icon?<MaterialCommunityIcons name={item.icon}  size={30} color="black" style={styles.icon}/>:<Image source={require("../../assets/dj.png")} style={styles.img} />}
                         
                     
                     <Text style={styles.text}>{item.lang}</Text>
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 1,
         borderColor: 'white',
-        backgroundColor: '#6e5494',
+        backgroundColor: '#4682B4',
         paddingBottom: 10,
         marginBottom: 10,
         // justifyContent: 'space-around',
@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
         color:"white",
         fontSize: 20,
         fontWeight: "bold",
+        
     },
     title: {
         fontSize: 30,
@@ -96,6 +97,8 @@ const styles = StyleSheet.create({
         marginLeft:20,
         textAlign: 'center',
         borderBottomWidth: 1,
+        borderBottomColor:"#4682B4",
+        fontFamily:'estonia-regular'
         
     }
 })
