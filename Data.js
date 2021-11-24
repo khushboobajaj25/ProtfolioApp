@@ -21,6 +21,19 @@ export const projectDetails = [
                         {       id : 6,
                                 img: require('./assets/bank/6.jpg'),
                         },
+                        {       id : 7,
+                                img: require('./assets/bank/7.jpg'),
+                        },
+                        {       id : 8,
+                                img: require('./assets/bank/8.jpg'),
+                        },
+                        {       id : 9,
+                                img: require('./assets/bank/9.jpg'),
+                        },
+                        {       id : 10,
+                                img: require('./assets/bank/10.jpg'),
+                        },
+
                 ],
                 Languages: 
                 {
